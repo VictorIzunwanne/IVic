@@ -1,0 +1,116 @@
+:root {
+  --tomato-jam: #d22332ff;
+  --regal-navy: #113472ff;
+  --sea-green: #428b54ff;
+  --deep-space-blue: #1a2b3fff;
+  --tomato-jam-2: #bc422fff;
+  --deep-teal: #43705fff;
+}
+
+html {
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+*::before,
+*,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-block-size: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  block-size: 6rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 5rem;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+}
+
+.logo,
+.menu {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  gap: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgb(243, 243, 243);
+  padding: 0.8rem 1rem;
+  border-radius: 5rem;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+.menu {
+  inline-size: 10rem;
+}
+
+.menu-con {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  block-size: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+footer > div {
+  display: flex;
+  gap: 5rem;
+}
+
+.nav > div {
+  display: flex;
+  align-items: center;
+}
+
+.next > img {
+  transform: rotate(180deg);
+}

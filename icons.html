@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icons</title>
+
+    <style>
+      body {
+        min-block-size: 100vh;
+        display: flex;
+				flex-direction: column;
+        justify-content: center;
+        align-items: center;
+				gap: 500px;
+				padding: 500px;
+      }
+
+      .search-icon {
+        position: relative;
+      }
+
+      .circle {
+        background-color: transparent;
+        block-size: 300px;
+        inline-size: 300px;
+        border-radius: 300px;
+        border: 30px solid black;
+      }
+
+      .short-line {
+        background-color: black;
+        border: none;
+        inline-size: 30px;
+        block-size: 100px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: rotate(135deg);
+      }
+
+      .menu-icon {
+				display: flex;
+				flex-direction: column;
+				gap: 40px;
+      }
+
+			.top,
+			.bottom {
+				display: flex;
+				gap: 40px;
+			}
+
+      .dots {
+        background-color: black;
+        block-size: 50px;
+        inline-size: 50px;
+				border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-icon">
+      <div class="circle"></div>
+      <div class="short-line"></div>
+    </div>
+
+    <div class="menu-icon">
+      <div class="top">
+        <div class="dots"></div>
+        <div class="dots"></div>
+      </div>
+
+      <div class="bottom">
+        <div class="dots"></div>
+        <div class="dots"></div>
+      </div>
+    </div>
+  </body>
+</html>

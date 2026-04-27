@@ -1,0 +1,21 @@
+FONT
+-san serif: Poppins
+
+COLOR
+-red
+-blue
+-green
+-navy blue
+-orange
+-green lemonish
+
+PICTURES/IMAGES
+-rosetta
+-sadness
+-disgust
+-judy
+-moana
+-vanellope
+
+ICONS
+-4 dots menu
