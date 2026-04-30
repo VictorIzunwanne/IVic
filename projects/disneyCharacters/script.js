@@ -43,35 +43,42 @@ charDs.forEach((charD) => {
 
 // CARDS IN VIEW
 
+// On Window Load
 // Declaring the main (scroll container)
 let main = document.querySelector("main");
 let charImgs = document.querySelectorAll(".char-img");
 
+// Selecting the individual cards
 charImgs.forEach((cha) => {
   let mainScr = main.scrollLeft;
   let chaRect = cha.getBoundingClientRect().x;
 
+  // Increasing the image size when the cards are in view
   if (chaRect > 100 && chaRect < 1200) {
     cha.style.transform = "scale(1)";
     cha.style.marginBottom = "0";
 
     return;
   }
+  // Reducing the image size when the cards are not in view
   cha.style.transform = "scale(0.8)";
   cha.style.marginBottom = "-2rem";
 });
 
+// On Document Scroll X
 main.addEventListener("scroll", () => {
   charImgs.forEach((cha) => {
     let mainScr = main.scrollLeft;
     let chaRect = cha.getBoundingClientRect().x;
 
+    // Increasing the image size when it is in view
     if (chaRect > 100 && chaRect < 1000) {
       cha.style.transform = "scale(1)";
       cha.style.marginBottom = "0";
 
       return;
     }
+    // Reducing the image size when it is not in view
     cha.style.transform = "scale(0.8)";
     cha.style.marginBottom = "-2rem";
   });
