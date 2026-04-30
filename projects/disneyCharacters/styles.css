@@ -23,77 +23,82 @@ html {
 }
 
 body {
-  min-block-size: 100vh;
+  block-size: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  block-size: 6rem;
+  block-size: 7rem;
+  padding: 0 5rem;
   display: flex;
   align-items: flex-end;
-  padding: 0 5rem;
 }
 
-header > div {
+header > div,
+footer > div {
   display: flex;
   align-items: center;
+  gap: 1rem;
+
+  block-size: 40%;
+
+  font-size: 1.2rem;
 }
 
-.logo,
-.menu {
-  font-size: 1.3rem;
+.lg {
+  font-size: 1.5rem;
   font-weight: 500;
-  letter-spacing: -1px;
-  gap: 0.5rem;
-  display: flex;
-  justify-content: flex-end;
 }
 
-.search {
+.srch {
   flex: 1;
-  display: flex;
   justify-content: center;
 }
 
-.bar {
+.srchbar {
+  background-color: #f0f0f0;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: rgb(243, 243, 243);
-  padding: 0.8rem 1rem;
-  border-radius: 5rem;
-}
 
-input {
-  background-color: transparent;
-  border: none;
-}
-
-input::placeholder {
-  font-size: 1rem;
+  block-size: 100%;
+  inline-size: 15rem;
+  border-radius: 2rem;
 }
 
 .menu {
-  inline-size: 10rem;
+  cursor: pointer;
 }
 
-.menu-con {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+input {
+  block-size: 20px;
+  border: none;
+  background-color: transparent;
+  margin-top: 0.4rem;
+}
+
+input::placeholder {
+  font-size: 1.2rem;
 }
 
 main {
+  background-color: lightpink;
   flex: 1;
 }
 
 footer {
-  block-size: 4rem;
+  block-size: 5rem;
+
   display: flex;
-  align-items: center;
-  padding: 0 5rem;
   justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 5rem;
+}
+
+footer > div {
+  gap: 4rem;
 }
 
 a {
@@ -101,16 +106,15 @@ a {
   color: grey;
 }
 
-footer > div {
+.nav,
+.nav div {
   display: flex;
-  gap: 5rem;
 }
 
-.nav > div {
-  display: flex;
-  align-items: center;
+.nav div {
+  cursor: pointer;
 }
 
-.next > img {
+.next img {
   transform: rotate(180deg);
 }
