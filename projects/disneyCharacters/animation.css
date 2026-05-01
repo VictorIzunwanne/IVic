@@ -39,7 +39,7 @@
 .char img {
   transform: scale(0.5);
   margin-bottom: -8rem;
-	animation: scaleUp 0.5s ease-in-out forwards;
+  animation: scaleUp 0.5s ease-in-out forwards;
 }
 
 .sadness img {
@@ -69,3 +69,27 @@
     transform: scale(1);
   }
 }
+
+@keyframes enlarge {
+  0% {
+    left: auto;
+  }
+
+  100% {
+    left: 20px;
+  }
+}
+
+/* .open {
+  animation: openUp 0.5s ease-in-out forwards;
+  background-color: red;
+
+  transition: all 0.25s;
+}
+
+@keyframes openUp {
+  0% {
+    block-size: 500px;
+    inline-size: 500px;
+  }
+} */

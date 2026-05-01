@@ -39,6 +39,12 @@ header {
   align-items: flex-end;
 }
 
+header,
+footer {
+  overflow: hidden;
+  transition: all 0.25s;
+}
+
 header > div,
 footer > div {
   display: flex;
@@ -97,7 +103,6 @@ main {
 
 main > div {
   block-size: 100%;
-  min-inline-size: 65rem;
 }
 
 .one,
@@ -117,8 +122,13 @@ main > div {
   padding-right: 8rem;
 }
 
+.cont {
+  inline-size: 18rem;
+  transition: 0.25s;
+}
+
 .char {
-  block-size: 50%;
+  inline-size: 18rem;
   flex: 1;
   border-radius: 1rem;
 
@@ -131,32 +141,32 @@ main > div {
 
 .rosetta {
   background: linear-gradient(45deg, var(--tomato-jam), #d68f95);
-  block-size: calc(50% + 2rem);
+  block-size: 15rem;
 }
 
 .sadness {
   background: linear-gradient(45deg, var(--regal-navy), #7895c5);
-  block-size: calc(50% - 1rem);
+  block-size: 13rem;
 }
 
 .disgust {
   background: linear-gradient(45deg, var(--sea-green), #77d890);
-  block-size: calc(50% + 1rem);
+  block-size: 15rem;
 }
 
 .judy {
   background: linear-gradient(45deg, var(--deep-space-blue), #4c6e96);
-  block-size: calc(50% + 3rem);
+  block-size: 17rem;
 }
 
 .moana {
   background: linear-gradient(45deg, var(--tomato-jam-2), #ce897f);
-  block-size: calc(50% + 4rem);
+  block-size: 19rem;
 }
 
 .vanellope {
   background: linear-gradient(45deg, var(--deep-teal), #77d890);
-  block-size: calc(50% - 1rem);
+  block-size: 13rem;
 }
 
 .char-img {
