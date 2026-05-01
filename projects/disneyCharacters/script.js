@@ -104,6 +104,15 @@ mores.forEach((i) => {
 
     let parentPos = parent.getBoundingClientRect();
 
+    let conts = document.querySelectorAll(".cont");
+
+    conts.forEach((con) => {
+      con.style.transition = "all 0.5s";
+      con.style.opacity = 0;
+
+      parent.parentElement.style.opacity = 1;
+    });
+
     i.style.display = "none";
     parent.style.position = "fixed";
     parent.style.left = parentPos.left + "px";
@@ -115,8 +124,8 @@ mores.forEach((i) => {
       parent.style.left = "10rem";
       parent.style.top = "10rem";
       parent.style.borderRadius = "10rem";
-      parent.style.blockSize = "100rem";
-      parent.style.inlineSize = "100rem";
-    }, 500);
+      parent.style.blockSize = "100vh";
+      parent.style.inlineSize = "100vw";
+    }, 250);
   });
 });
