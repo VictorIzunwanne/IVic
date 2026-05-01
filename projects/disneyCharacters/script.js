@@ -111,15 +111,12 @@ mores.forEach((i) => {
     parent.style.transition = "all 0.5s";
 
     setTimeout(() => {
+      parent.style.transition = "all 1s";
       parent.style.left = "10rem";
       parent.style.top = "10rem";
-    }, 500);
-
-    setTimeout(() => {
-      parent.style.transition = "all 1s";
       parent.style.borderRadius = "10rem";
       parent.style.blockSize = "100rem";
       parent.style.inlineSize = "100rem";
-    }, 1000);
+    }, 500);
   });
 });
