@@ -94,16 +94,8 @@ let mores = document.querySelectorAll(".more");
 
 mores.forEach((i) => {
   i.addEventListener("click", () => {
-    let header = document.querySelector("header");
-    let footer = document.querySelector("footer");
-
     let parent = i.parentElement.parentElement;
-
-    header.style.blockSize = 0;
-    footer.style.blockSize = 0;
-
     let parentPos = parent.getBoundingClientRect();
-
     let conts = document.querySelectorAll(".cont");
 
     conts.forEach((con) => {
@@ -113,19 +105,78 @@ mores.forEach((i) => {
       parent.parentElement.style.opacity = 1;
     });
 
-    i.style.display = "none";
+    let img = parent.querySelector(".char-img");
+    let imgPos = img.getBoundingClientRect();
+    let child = img.querySelector("img");
+
+    img.style.position = "fixed";
+    img.style.transition = "all 0.5s";
+    img.style.left = imgPos.left + "px";
+    img.style.top = imgPos.top + "px";
+
+    setTimeout(() => {
+      img.style.left = "18rem";
+      img.style.top = "5rem";
+
+      child.style.transition = "all 0.5s";
+      child.style.blockSize = "25rem";
+    }, 10);
+
+    i.parentElement.style.transition = "all 0.5s";
+
+    setTimeout(() => {
+      i.parentElement.style.blockSize = "100%";
+
+      if (parent.parentElement.parentElement.classList.contains("two")) {
+        i.parentElement.style.paddingLeft = "280px";
+
+        return;
+      }
+
+      i.parentElement.style.paddingLeft = "360px";
+    }, 300);
+
     parent.style.position = "fixed";
     parent.style.left = parentPos.left + "px";
     parent.style.top = parentPos.top + "px";
     parent.style.transition = "all 0.5s";
 
+    let socials = document.querySelector(".socials");
+    let prev = document.querySelector(".prev");
+    let next = document.querySelector(".next");
+
+    let abtChar = document.createElement("p");
+    abtChar.classList.add("abtChar");
+    abtChar.innerText =
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint temporibus vel autem! Corporis deserunt aperiam provident facilis rerum tempore soluta rem beatae quis, iusto aliquam quisquam tempora minus, maxime veniam?";
+    abtChar.style.inlineSize = "20rem";
+    abtChar.style.marginBlockStart = "0.5rem";
+    abtChar.style.fontSize = "0.8rem";
+    abtChar.style.transition = "all 1s";
+
+    console.log(abtChar);
+
+    socials.classList.add("swipeLeft");
+    prev.classList.add("swipeLeft");
+    next.classList.add("swipeRight");
+
     setTimeout(() => {
-      parent.style.transition = "all 1s";
-      parent.style.left = "10rem";
-      parent.style.top = "10rem";
+      i.style.display = "none";
+      parent.style.transition = "all 0.5s";
+      parent.style.left = "15rem";
+      parent.style.top = "12rem";
       parent.style.borderRadius = "10rem";
       parent.style.blockSize = "100vh";
       parent.style.inlineSize = "100vw";
+      parent.querySelector(".char-name").style.fontSize = "3.5rem";
+      parent.querySelector(".char-name").style.marginBottom = "-0.5rem";
+
+      i.parentElement.appendChild(abtChar);
+      abtChar.style.opacity = 0;
+
+      setTimeout(() => {
+        abtChar.style.opacity = 1;
+      }, 50);
     }, 250);
   });
 });
