@@ -10,17 +10,41 @@ let next = document.querySelector(".next");
 let one = document.querySelector(".one");
 let two = document.querySelector(".two");
 
+one.style.transition = "gap 0.25s";
+two.style.transition = "gap 0.25s";
+one.parentElement.style.transition = "gap 0.25s";
+
 // Scrolling the respective containers to view
 prev.addEventListener("click", () => {
-  one.scrollIntoView({
-    behavior: "smooth",
-  });
+  one.style.gap = "2.5rem";
+  two.style.gap = "2.5rem";
+  one.parentElement.style.gap = "2.5rem";
+
+  setTimeout(() => {
+    one.scrollIntoView({
+      behavior: "smooth",
+    });
+
+    one.style.gap = "2rem";
+    two.style.gap = "2rem";
+    one.parentElement.style.gap = "2rem";
+  }, 500);
 });
 
 next.addEventListener("click", () => {
-  two.scrollIntoView({
-    behavior: "smooth",
-  });
+  one.style.gap = "2.5rem";
+  two.style.gap = "2.5rem";
+  one.parentElement.style.gap = "2.5rem";
+
+  setTimeout(() => {
+    two.scrollIntoView({
+      behavior: "smooth",
+    });
+
+    one.style.gap = "2rem";
+    two.style.gap = "2rem";
+    one.parentElement.style.gap = "2rem";
+  }, 500);
 });
 
 // READ MORE
@@ -152,9 +176,7 @@ mores.forEach((i) => {
     abtChar.style.inlineSize = "20rem";
     abtChar.style.marginBlockStart = "0.5rem";
     abtChar.style.fontSize = "0.8rem";
-    abtChar.style.transition = "all 1s";
-
-    console.log(abtChar);
+    abtChar.style.transition = "all 1.5s";
 
     socials.classList.add("swipeLeft");
     prev.classList.add("swipeLeft");

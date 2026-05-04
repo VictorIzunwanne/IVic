@@ -111,15 +111,16 @@ main > div {
   align-items: flex-end;
 
   padding-bottom: 2rem;
-  gap: 2rem;
 }
 
 .one {
   padding-left: 8rem;
+  gap: 2rem;
 }
 
 .two {
   padding-right: 8rem;
+  gap: 2rem;
 }
 
 .cont {
