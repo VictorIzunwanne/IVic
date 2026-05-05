@@ -99,8 +99,6 @@ main {
   display: flex;
   gap: 2rem;
   overflow: scroll;
-
-  background-color: orange;
 }
 
 main > div {
