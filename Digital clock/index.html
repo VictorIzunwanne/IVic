@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Izunwanne Victor A.E" />
+    <meta name="description" content="A digital clock" />
+
+    <title>Digital Clock</title>
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/index.js" defer></script>
+  </head>
+  <body>
+    <p>Digital clock</p>
+
+    <div class="clock">
+      <div class="time">
+        <div class="hour">
+          <div class="hour-1">0</div>
+          <div class="hour-2">0</div>
+        </div>
+
+        <div class="blinking-column">:</div>
+
+        <div class="min">
+          <div class="min-1">0</div>
+          <div class="min-2">0</div>
+        </div>
+
+        <div class="blinking-column">:</div>
+
+        <div class="sec">
+          <div class="sec-1">0</div>
+          <div class="sec-2">0</div>
+        </div>
+      </div>
+
+      <div class="date"></div>
+      <div class="message">Click the start button to start</div>
+    </div>
+
+    <div class="button">
+      <button type="button" class="timer">START</button>
+    </div>
+
+    <div class="set-time-and-date">
+      <p>Computer Keyboard Shortcuts</p>
+      <p>Space - start / pause</p>
+      <p>Escape - reset</p>
+      <p>Arrow Up - Speed up</p>
+      <p>Arrow Down - Slow down</p>
+    </div>
+
+    <div class="clock-speed">
+      <div class="speed-note">
+        <p>Change clock speed</p>
+      </div>
+
+      <div class="speed-info">
+        <div class="decrease speed-button">
+          <button type="button" class="decrement">-</button>
+        </div>
+
+        <div class="value">1000</div>
+
+        <div class="increase speed-button">
+          <button type="button" class="increment">+</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+:root {
+  --primary-color: #ff0000;
+  --secondary-color: #000000;
+  --other-color: #eaeaff;
+  --text-color: #000;
+}
+
+@font-face {
+  font-family: clock-font;
+  src: url("../font/digital-7.ttf");
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  background-color: var(--other-color);
+  color: var(--text-color);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  block-size: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+body > p {
+  font-weight: bolder;
+}
+
+.clock {
+  background-color: var(--text-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  color: var(--other-color);
+  gap: 1rem;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 3rem;
+}
+
+.hour,
+.min,
+.sec {
+  font-family: clock-font, sans-serif;
+  background-color: var(--other-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  inline-size: 4rem;
+}
+
+.hour > div,
+.min > div,
+.sec > div {
+  color: var(--primary-color);
+  inline-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blinking-column {
+  color: var(--primary-color);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.message {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.timer {
+  inline-size: 5rem;
+  block-size: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-color);
+  color: var(--other-color);
+  cursor: pointer;
+}
+
+.clock-speed {
+  background-color: var(--secondary-color);
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  inline-size: 10rem;
+  block-size: 5rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.speed-note {
+  color: var(--other-color);
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speed-info {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.speed-info > div {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value {
+  background-color: var(--other-color);
+  color: var(--primary-color);
+
+  font-family: clock-font, sans-serif;
+  font-size: 1.5rem;
+
+  padding-inline: 0.5rem;
+}
+
+.speed-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 0;
+}
+
+.speed-button > button {
+  background-color: transparent;
+  color: var(--other-color);
+  border: none;
+
+  font-size: 1.5rem;
+  block-size: 100%;
+  inline-size: 100%;
+
+  cursor: pointer;
+}
