@@ -115,6 +115,7 @@ function reset() {
 
   btn.innerHTML = "START";
   speed.innerHTML = 1000;
+  value = 1000;
 }
 
 function runSec() {
