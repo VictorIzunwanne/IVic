@@ -1,0 +1,30 @@
+html {
+  font-family: outfit, sans-serif;
+}
+
+:root {
+	--yellow: #FDFF00;
+	--transparent-yellow: rgba(255, 255, 0, 0.153);
+
+	--green: #418C07;
+	--transparent-green: rgba(65, 140, 7, 0.153);
+
+	--greenish-blue: #7DFBFC;
+	--blue: #1E14E8;
+	--red: #E62E2D;
+	--pink: #F2B5D8;
+	--black: #3f3f3f;
+	--white: #fff;
+	
+	--lightgrey: #ececec;
+	--darkgrey: #2b2b2b; 
+	--transparent-lightgrey: rgba(0, 0, 0, 0.153);
+}
+
+*::before,
+*,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hello world</p>
+    <p>Hello Continent</p>
+    <p>Hello Country</p>
+    <p>Hello State</p>
+    <p>Hello Local government</p>
+
+    <button type="button">Calculate</button>
+
+    <script>
+      "use strict";
+
+      const para = document.querySelectorAll("p");
+
+      console.log(Object.values(para)[4].innerHTML);
+
+      //////////////////////////////////////////////////
+      //////////////////////////////////////////////////
+
+      const btn = document.querySelector("button");
+
+      let param = {};
+
+      btn.addEventListener("click", () => {
+        listen();
+      });
+
+      function listen() {
+        param = {
+          value1: +prompt("Enter a number", ""),
+          value2: +prompt("Enter another number", ""),
+        };
+
+        console.log(sum());
+        console.log(mul());
+        console.log(div());
+      }
+
+      function sum() {
+        return "Addition:" + " " + (param.value1 + param.value2);
+      }
+
+      function mul() {
+        return "Multiplication:" + " " + param.value1 * param.value2;
+      }
+
+      function div() {
+        return "Division:" + " " + param.value1 / param.value2;
+      }
+
+      //////////////////////////////////////////////////////
+      //////////////////////////////////////////////////////
+
+      function User(name) {
+        this.name = name;
+        this.admin = true;
+      }
+
+      let user = new User("Victor");
+      let brother = new User("David");
+
+      console.log(user);
+      console.log(brother);
+
+      let elder = new (function () {
+        alert("I know you");
+      })();
+    </script>
+  </body>
+</html>
