@@ -1,9 +1,9 @@
 .container {
   background-color: var(--white);
-	block-size: 100vh;
+  block-size: 100vh;
 
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .none {
@@ -30,7 +30,7 @@ header {
 
 h1 {
   font-size: 1.2rem;
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .shadow {
@@ -65,10 +65,13 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  border: none;
   border-radius: 0.5rem;
 
   cursor: pointer;
+}
+
+.menu-btn {
+  border: 1px solid var(--green);
 }
 
 .theme-btn {
@@ -83,11 +86,11 @@ h2 {
 
 main {
   position: relative;
-	block-size: 50vh;
-	flex: 1;
+  block-size: 50vh;
+  flex: 1;
 
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu {
@@ -163,13 +166,13 @@ ul {
 }
 
 .content {
-	block-size: 100%;
+  block-size: 100%;
 
   display: flex;
   flex-direction: column;
-  padding: 1rem; 
+  padding: 1rem;
 
-	overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 footer {
