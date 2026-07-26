@@ -6,6 +6,10 @@
 	flex-direction: column;
 }
 
+.none {
+  display: none;
+}
+
 .dark {
   background-color: var(--black);
   color: #fff;
@@ -13,6 +17,8 @@
 
 header {
   background-color: var(--white);
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .sch-info {
@@ -23,39 +29,30 @@ header {
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 	cursor: pointer;
 }
 
-.nav-bar {
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 1rem;
-  border-bottom: 1px solid var(--green);
+.shadow {
+  background-color: var(--transparent-lightgrey);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* opacity: 0; */
 }
 
-.nav-bar > div {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-.page-title {
-  cursor: pointer;
+.space {
+  flex: 1;
 }
 
 .menu-btn,
 .theme-btn {
   background-color: var(--transparent-green);
 
-  block-size: 2.5rem;
-  inline-size: 2.5rem;
+  block-size: 2rem;
+  inline-size: 2rem;
 
   display: flex;
   justify-content: center;
@@ -70,6 +67,7 @@ h1 {
 .theme-btn {
   border: 1px solid var(--white);
   background-color: transparent;
+  justify-self: flex-end;
 }
 
 h2 {
@@ -97,7 +95,7 @@ main {
   padding: 0;
 
   overflow: hidden;
-  transition: all 0.25s;
+  transition: all 0.05s;
   z-index: 9;
 }
 
@@ -179,8 +177,8 @@ footer {
     padding: 1rem 2rem;
   }
 
-  .nav-bar {
-    padding: 1rem 2rem;
+  .none {
+    display: inline-block;
   }
 
   .menu {

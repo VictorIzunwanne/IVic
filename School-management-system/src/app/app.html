@@ -1,86 +1,79 @@
 <div class="container">
   <header>
     <div class="sch-info">
-      <img src="logo.png" alt="school logo" height="30px" />
+      <button type="button" class="menu-btn" (click)="toggleMenu()">
+        <img src="menu.svg" alt="hamburger menu" />
+      </button>
 
-      <h1 routerLink="/" (click)="closeMenu()" (click)="updateTitle('Dashboard')" tabindex="-1">
-        ENEFEM GROUP OF SCHOOLS
+      <h1 routerLink="/" (click)="closeMenu()" (click)="reloadPage()" tabindex="-1">
+        ENEFEM <span class="none">GROUP OF </span> SCHOOLS
       </h1>
-    </div>
 
-    <div class="nav-bar">
-      <div>
-        <button type="button" class="menu-btn" (click)="toggleMenu()">
-          <img src="menu.svg" alt="hamburger menu" />
-        </button>
+      <div class="space"></div>
 
-        <h2 class="page-title" (click)="reloadPage()">{{ head }}</h2>
-      </div>
-
-      <div>
-        <button type="button" class="theme-btn" (click)="toggleTheme()">
-          <img src="{{ thm }}.svg" alt="theme icon" />
-        </button>
-      </div>
+      <button type="button" class="theme-btn" (click)="toggleTheme()">
+        <img src="{{ thm }}.svg" alt="theme icon" />
+      </button>
     </div>
   </header>
 
   <main>
+    <div class="shadow"></div>
     <div class="menu">
       <ul class="menu-list">
         <li class="heading"><p>Quick Links</p></li>
 
-        <li routerLink="/" (click)="closeMenu()" (click)="updateTitle('Dashboard')">
+        <li routerLink="/" (click)="closeMenu()">
           <div class="menu-icon">
             <img src="dashboard.svg" alt="dashboard icon" height="20px" />
           </div>
           <p>Dashboard</p>
         </li>
 
-        <li routerLink="/message" (click)="closeMenu()" (click)="updateTitle('Message')">
+        <li routerLink="/message" (click)="closeMenu()">
           <div class="menu-icon"><img src="message.svg" alt="message icon" height="20px" /></div>
           <p>Message</p>
         </li>
 
         <li class="heading"><p>Parents And Staffs</p></li>
 
-        <li routerLink="/staff" (click)="closeMenu()" (click)="updateTitle('Staffs')">
+        <li routerLink="/staff" (click)="closeMenu()">
           <div class="menu-icon"><img src="staff.svg" alt="staff icon" height="20px" /></div>
           <p>Staffs</p>
         </li>
 
-        <li routerLink="/parent" (click)="closeMenu()" (click)="updateTitle('Parents')">
+        <li routerLink="/parent" (click)="closeMenu()">
           <div class="menu-icon"><img src="parent.svg" alt="parent icon" height="20px" /></div>
           <p>Parents</p>
         </li>
 
         <li class="heading"><p>Pupils</p></li>
 
-        <li routerLink="/pupil" (click)="closeMenu()" (click)="updateTitle('Pupils')">
+        <li routerLink="/pupil" (click)="closeMenu()">
           <div class="menu-icon"><img src="pupil.svg" alt="pupil icon" height="20px" /></div>
           <p>Pupils</p>
         </li>
 
-        <li routerLink="/class" (click)="closeMenu()" (click)="updateTitle('Class Management')">
+        <li routerLink="/class" (click)="closeMenu()">
           <div class="menu-icon"><img src="class.svg" alt="class icon" height="20px" /></div>
           <p>Class Mgt.</p>
         </li>
 
-        <li routerLink="/record" (click)="closeMenu()" (click)="updateTitle('Records')">
+        <li routerLink="/record" (click)="closeMenu()">
           <div class="menu-icon"><img src="record.svg" alt="record icon" height="20px" /></div>
           <p>Records</p>
         </li>
 
         <li class="heading"><p>School</p></li>
 
-        <li routerLink="/announcement" (click)="closeMenu()" (click)="updateTitle('Announcement')">
+        <li routerLink="/announcement" (click)="closeMenu()">
           <div class="menu-icon">
             <img src="announcement.svg" alt="announcement icon" height="20px" />
           </div>
           <p>Announcement</p>
         </li>
 
-        <li routerLink="/about" (click)="closeMenu()" (click)="updateTitle('About School')">
+        <li routerLink="/about" (click)="closeMenu()">
           <div class="menu-icon"><img src="about.svg" alt="about icon" height="20px" /></div>
           <p>About School</p>
         </li>
@@ -90,9 +83,9 @@
     <div class="content" (click)="closeMenu()">
       <router-outlet></router-outlet>
     </div>
-
-    <footer>
-      <p>&copy;All Rights Reserved. ENEFEM GROUP OF SCHOOLS. 2026</p>
-    </footer>
   </main>
+
+  <footer>
+    <p>&copy;All Rights Reserved. ENEFEM GROUP OF SCHOOLS. 2026</p>
+  </footer>
 </div>

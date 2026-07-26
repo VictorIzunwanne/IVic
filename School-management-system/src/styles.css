@@ -16,8 +16,8 @@ html {
 	--black: #3f3f3f;
 	--white: #fff;
 	
-	--lightgrey: #ececec;
-	--darkgrey: #2b2b2b; 
+	--lightgrey: #fafafa;
+	--darkgrey: #363636; 
 	--transparent-lightgrey: rgba(0, 0, 0, 0.153);
 }
 

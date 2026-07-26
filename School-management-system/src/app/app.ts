@@ -1,5 +1,5 @@
-import { Component, signal, inject } from '@angular/core';
-import { RouterOutlet, Router, RouterLinkWithHref } from '@angular/router';
+import { Component, signal } from '@angular/core';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,9 @@ import { RouterOutlet, Router, RouterLinkWithHref } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('School-management-system');
-  private router = inject(Router);
 
   theme = localStorage.getItem('theme') || 'light';
   thm = this.theme;
-  head = sessionStorage.getItem('title') || 'Dashboard';
 
   ngOnInit() {
     const menu = document.querySelector('.menu') as HTMLElement;
@@ -31,14 +29,6 @@ export class App {
       header.classList.remove('dark');
       this.thm = 'light';
     }
-
-    if (!sessionStorage.getItem('title')) {
-      this.router.navigate(['/']);
-    }
-  }
-
-  ngOnDestroy() {
-    sessionStorage.removeItem('title');
   }
 
   toggleMenu() {
@@ -73,11 +63,5 @@ export class App {
 
   reloadPage() {
     window.location.reload();
-  }
-
-  updateTitle(text: string) {
-    this.head = text;
-
-    sessionStorage.setItem('title', text);
   }
 }
