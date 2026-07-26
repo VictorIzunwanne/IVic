@@ -17,23 +17,24 @@ header {
 
 .sch-info {
   display: flex;
-  padding: 2rem 1rem;
+  align-items: center;
+  padding: 1rem;
   gap: 1rem;
 }
 
 h1 {
-  font-size: 1.3rem;
+  font-size: 1rem;
 	cursor: pointer;
 }
 
 .nav-bar {
-  background-color: var(--transparent-lightgrey);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 1rem;
+  border-bottom: 1px solid var(--green);
 }
 
 .nav-bar > div {
@@ -175,7 +176,7 @@ footer {
 
 @media screen and (min-width: 600px) {
   .sch-info {
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
 
   .nav-bar {
