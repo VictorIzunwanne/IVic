@@ -2,7 +2,7 @@
   <header>
     <div class="sch-info">
       <button type="button" class="menu-btn" (click)="toggleMenu()">
-        <img src="menu.svg" alt="hamburger menu" />
+        <img src="{{ menuIcon }}.svg" alt="hamburger menu" />
       </button>
 
       <h1 routerLink="/" (click)="closeMenu()" (click)="reloadPage()" tabindex="-1">
@@ -18,7 +18,7 @@
   </header>
 
   <main>
-    <div class="shadow"></div>
+    <div class="shadow" (click)="closeMenu()"></div>
     <div class="menu">
       <ul class="menu-list">
         <li class="heading"><p>Quick Links</p></li>
@@ -80,7 +80,7 @@
       </ul>
     </div>
 
-    <div class="content" (click)="closeMenu()">
+    <div class="content">
       <router-outlet></router-outlet>
     </div>
   </main>
